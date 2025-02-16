@@ -1,0 +1,128 @@
+.login-con{
+    display: flex;
+    flex-wrap: wrap;
+}
+.logimg-con{
+    margin-top: 10px;
+    margin-left: 10px;
+    background-image: url("../images/login.jpg");
+    background-size: 100% 100%;
+    width: 60%;
+    height: 88vh;
+}
+.logtext-con input{
+    border: 1px solid rgb(114, 125, 249);
+    padding: 1vw 1vw;
+    border-radius: 10px;
+    width: 70%;
+    display: flex;
+    margin: 5px;
+    margin-left: 20px;
+}
+.logtext-con input:hover{
+    box-shadow: 0 4px 8px rgb(83, 97, 250);
+}
+.logtext-con label{
+    padding: 20px;
+    color: #2b254f;
+}
+.logtext-con button{
+    border: 1px solid rgb(114, 125, 249);
+    padding: 0.8vw 1vw;
+    border-radius: 10px;
+    margin: 5px;
+    margin-left: 20px;
+    font-weight: bold;
+    color: #2b254f;
+}
+.logtext-con button:hover{
+    background-color: #a4a4db;
+    cursor: pointer;
+    box-shadow: 0 4px 8px #8888fd;
+}
+.logtext-con{
+    border: 1px solid rgba(0,0,0,0.2);
+    margin: 18px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 30%;
+}
+.logtext-con img{
+    height: 80px;
+    width: 90%;
+    padding: 20px;
+}
+.error-msg{
+    color: red;
+    padding-left: 15px;
+}
+h4{
+    padding-left: 20px;
+    color: #2b254f;
+}
+@media (max-width: 768px) {
+    .login-con {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logimg-con {
+        width: 90%;
+        height: 40vh;
+        margin: 10px auto;
+    }
+
+    .logtext-con {
+        width: 90%;
+        margin: 10px auto; 
+    }
+
+    .logtext-con input {
+        width: 90%; 
+    }
+
+    .logtext-con button {
+        width: 93%;
+    }
+}
+
+/* For mobile devices (less than 480px) */
+@media (max-width: 480px) {
+    .logimg-con {
+        height: 30vh; 
+    }
+
+    .logtext-con img {
+        height: 60px; 
+    }
+
+    .logtext-con input {
+        padding: 8px; 
+    }
+
+    .logtext-con button {
+        padding: 8px; 
+    }
+
+    h4 {
+        font-size: 14px; 
+    }
+}
+@media (max-width:420px) {
+    .logtext-con img {
+        height: 60px; 
+    }
+
+    .logtext-con input {
+        padding: 4px;
+        width: 80%; 
+    }
+
+    .logtext-con button {
+        padding: 4px;
+        width: 83%; 
+    }
+}

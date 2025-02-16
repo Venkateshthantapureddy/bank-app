@@ -1,0 +1,117 @@
+body{
+    background-color: rgb(237, 245, 253);
+}
+.signUp-con{
+    display: flex;
+    flex-wrap: wrap;
+}
+.formImg-con{
+    margin-top: 10px;
+    margin-left: 10px;
+    background-image: url("../images/acc-det.jpg");
+    background-size: 100% 100%;
+    width: 60%;
+    height: 88vh;
+}
+.form-con input{
+    border: 1px solid rgb(114, 125, 249);
+    padding: 1vw 1vw;
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    margin: 5px;
+    margin-left: 20px;
+}
+.form-con label{
+    font-weight: bold;
+    padding: 20px;
+    color: #2b254f;
+}
+.form-con button{
+    border: 1px solid rgb(114, 125, 249);
+    padding: 0.8vw 1vw;
+    border-radius: 10px;
+    margin: 5px;
+    margin-left: 20px;
+    font-weight: bold;
+    color: #2b254f;
+}
+.form-con input:hover{
+    box-shadow: 0 4px 8px rgb(83, 97, 250);
+}
+.form-con button:hover{
+    background-color: #a4a4db;
+    cursor: pointer;
+    box-shadow: 0 4px 8px #8888fd;
+}
+.form-con{
+    border: 1px solid rgba(0,0,0,0.2);
+    margin: 15px;
+    padding: 30px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.form-con img{
+    height: 80px;
+    width: 100%; /* Make the logo responsive */
+    max-width: 440px;
+    padding: 20px;
+}
+@media (max-width:1010px) {
+    .formImg-con{
+        width: 55%;
+    }
+    .form-con{
+        width: 30%;
+    }
+}
+/* For tablets and smaller screens (less than 768px) */
+@media (max-width: 768px) {
+    .signUp-con {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .formImg-con {
+        width: 90%; /* Adjust width for smaller screens */
+        height: 40vh; /* Adjust height for smaller screens */
+        margin: 10px auto; /* Center the image container */
+    }
+
+    .form-con {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 10px auto; /* Center the form container */
+    }
+
+    .form-con input {
+        width: 90%; /* Make inputs responsive */
+    }
+
+    .form-con button {
+        width: 90%; /* Make buttons responsive */
+    }
+}
+
+/* For mobile devices (less than 480px) */
+@media (max-width: 480px) {
+    .formImg-con {
+        height: 30vh; /* Further adjust height for very small screens */
+    }
+
+    .form-con img {
+        height: 60px; /* Reduce logo size for smaller screens */
+    }
+
+    .form-con input {
+        padding: 8px; /* Adjust padding for smaller screens */
+    }
+
+    .form-con button {
+        padding: 8px; /* Adjust button padding for smaller screens */
+    }
+
+    .form-con label {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+}

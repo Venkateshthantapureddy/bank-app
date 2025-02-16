@@ -1,0 +1,91 @@
+.acc-con{
+    display: flex;
+    flex-wrap: wrap;
+}
+.imgacc-con{
+    margin-top: 10px;
+    margin-left: 10px;
+    background-image: url("../images/homereg.jpeg");
+    background-size: 100% 100%;
+    width: 60%;
+    height: 88vh;
+}
+.textacc-con{
+    border: 1px solid rgba(0,0,0,0.2);
+    margin: 18px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 30%;
+}
+.textacc-con img{
+    height: 80px;
+    width: 100%;
+    max-width: 380px;
+    padding: 20px;
+}
+.textacc-con h2{
+    color: #333366;
+    padding-left: 20px;
+}
+p{
+    font-weight: bold;
+    padding-left: 20px;
+    color: gray;
+}
+span{
+    font-weight: bold;
+    padding-left: 20px;
+    font-size: large;
+    color: #2b254f;
+}
+@media (max-width:1360px) {
+    .textacc-con img {
+        width: 80%; /* Reduce logo size for smaller screens */
+    }
+}
+/* For tablets and smaller screens (less than 768px) */
+@media (max-width: 768px) {
+    .acc-con {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .imgacc-con {
+        width: 90%; /* Adjust width for smaller screens */
+        height: 40vh; /* Adjust height for smaller screens */
+        margin: 10px auto; /* Center the image container */
+    }
+    .textacc-con img {
+        width: 80%; /* Reduce logo size for smaller screens */
+    }
+    .textacc-con {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 10px auto; /* Center the text container */
+    }
+}
+
+/* For mobile devices (less than 480px) */
+@media (max-width: 480px) {
+    .imgacc-con {
+        height: 30vh; /* Further adjust height for very small screens */
+    }
+
+    .textacc-con img {
+        height: 60px; /* Reduce logo size for smaller screens */
+    }
+
+    .textacc-con h2 {
+        font-size: 20px; /* Reduce heading size for smaller screens */
+    }
+
+    .textacc-con p {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    .textacc-con span {
+        font-size: 16px; /* Reduce font size for smaller screens */
+    }
+}
