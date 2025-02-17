@@ -13,7 +13,7 @@ const Login = ({updateCustomer}) => {
   const handleLogin = async e => {
     e.preventDefault ();
     try {
-      const response=await axios.post ('http://localhost:3001/api/login', signInData);
+      const response=await axios.post ('https://students-reserved-bank.onrender.com/api/login', signInData);
       localStorage.setItem("loginSuccess", "true");
       updateCustomer(response.data.customer)
       navigate("/account-details");

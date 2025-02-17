@@ -27,7 +27,7 @@ const Withdrawl = ({customer,updateBalance}) => {
           if(withdrawlData.withdrawlType!=="cash"&&withdrawlData.withdrawlType!=="online"){
             return window.alert("Do you mean cash or online?")
           }
-            const response=await axios.post("http://localhost:3001/api/withdrawl",withdrawlData)
+            const response=await axios.post("https://students-reserved-bank.onrender.com/api/withdrawl",withdrawlData)
             if (response.data.balance !== undefined) {
               updateBalance(response.data.balance);
             }

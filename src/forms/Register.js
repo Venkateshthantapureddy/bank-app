@@ -23,7 +23,7 @@ function Register () {
         branch: signUpData.branch,
         phnNum: signUpData.phnNum ? Number(signUpData.phnNum) : 0,
       };
-      const response=await axios.post ('http://localhost:3001/api/signup', dataToSend);
+      const response=await axios.post ('https://students-reserved-bank.onrender.com/api/signup', dataToSend);
       if (response.status === 201) {
         toast.success("SignUp Successful!", {
           position: "top-right",

@@ -21,7 +21,7 @@ const DepositForm = ({customer, updateBalance}) => {
         if(depositData.depositType!=="cash"&&depositData.depositType!=="online"){
             return alert("Do you mean cash or online?")
         }
-        const response=await axios.post("http://localhost:3001/api/deposit",depositData)
+        const response=await axios.post("https://students-reserved-bank.onrender.com/api/deposit",depositData)
         if (response.data.balance !== undefined) {
           updateBalance(response.data.balance);
         }
