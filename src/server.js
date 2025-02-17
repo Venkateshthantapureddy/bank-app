@@ -6,10 +6,7 @@ const cors=require('cors')
 const app=express()
 app.use(bodyParser.json())
 app.use(cors())
-mongoose.connect(process.env.Mongo_url,{
-    useNewUrlParser:true,
-    useUnifiedTopology:true, 
-})
+mongoose.connect(process.env.Mongo_url)
 const db=mongoose.connection
 db.once("open",()=>{
     console.log("connected to mongodb")
@@ -155,6 +152,4 @@ app.post("/api/withdrawl",async(req,res)=>{
         res.status(500).json({ message: "Internal server error" });
     }
 })
-app.listen(process.env.port || 3001,()=>{
-    console.log(`server is running on port ${port}`)
-})
+app.listen(process.env.port || 3001)
