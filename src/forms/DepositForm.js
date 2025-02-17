@@ -19,7 +19,7 @@ const DepositForm = ({customer, updateBalance}) => {
     e.preventDefault()
     try {
         if(depositData.depositType!=="cash"&&depositData.depositType!=="online"){
-            return window.alert("Do you mean cash or online?")
+            return alert("Do you mean cash or online?")
         }
         const response=await axios.post("http://localhost:3001/api/deposit",depositData)
         if (response.data.balance !== undefined) {

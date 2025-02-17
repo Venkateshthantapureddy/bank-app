@@ -1,12 +1,12 @@
 const express=require('express')
 const mongoose=require('mongoose')
 const bodyParser=require('body-parser')
+require("dotenv").config();  
 const cors=require('cors')
 const app=express()
-const port=process.env.PORT || 3001
 app.use(bodyParser.json())
 app.use(cors())
-mongoose.connect("mongodb://localhost:27017/Students_Reserved_Bank",{
+mongoose.connect(process.env.Mongo_url,{
     useNewUrlParser:true,
     useUnifiedTopology:true, 
 })
@@ -155,6 +155,6 @@ app.post("/api/withdrawl",async(req,res)=>{
         res.status(500).json({ message: "Internal server error" });
     }
 })
-app.listen(port,()=>{
+app.listen(process.env.port || 3001,()=>{
     console.log(`server is running on port ${port}`)
 })
